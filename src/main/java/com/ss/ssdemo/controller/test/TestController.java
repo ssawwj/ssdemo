@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j
 @Controller
-public class Test {
+public class TestController {
     @Autowired
     private SyslogServiceImpl syslogService;
 
