@@ -36,15 +36,16 @@ public class ShiroConfig {
          * role:该资源必须得到角色权限才可以访问
          */
         Map<String,String> filterMap = new LinkedHashMap<String,String>();
-        filterMap.put("/add.html","authc");
-        filterMap.put("/update.html","anon");
-        filterMap.put("/toLogin.html", "anon");
-        filterMap.put("/login.html", "anon");
-
-        //授权过滤器：授权拦截后，shiro会自动跳转到未授权页面
-        filterMap.put("/add.html", "perms[user:add]");
-        filterMap.put("/update.html", "perms[user:update]");
-        filterMap.put("/*", "authc");
+//        filterMap.put("/add.html","authc");
+//        filterMap.put("/update.html","anon");
+//        filterMap.put("/toLogin.html", "anon");
+//        filterMap.put("/login.html", "anon");
+//
+//        //授权过滤器：授权拦截后，shiro会自动跳转到未授权页面
+//        filterMap.put("/add.html", "perms[user:add]");
+//        filterMap.put("/update.html", "perms[user:update]");
+//        filterMap.put("/*", "authc");
+        filterMap.put("/*", "anon");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
 
         //修改跳转的登录页面，不加此项就会跳转到login.jsp页面
